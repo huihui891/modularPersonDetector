@@ -1,0 +1,3 @@
+# Datasets Read Me
+
+All training/testing datasets goes in this directory. These dataset should follow the same folder hierarchy as described in folders INRIA and Caltech (where user are expected to copy those repositiores to)
