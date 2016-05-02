@@ -2,6 +2,6 @@
 
 Here's where the INRIA dataset is expected to live.
 
-It can be downloaded from the official website (http://pascal.inrialpes.fr/data/human/) where a detailed description of how it was generated can be found.
+It can be downloaded (~1GB) from the official website (http://pascal.inrialpes.fr/data/human/) where a detailed description of how it was generated can be found.
 
-//// Complete instructions 
+Once downloaded, extract the “.tar” file here.
