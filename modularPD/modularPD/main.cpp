@@ -13,5 +13,7 @@ int main(int argc, const char * argv[]) {
 
     cv::Mat a = cv::Mat::eye(5, 5, CV_8U);
     
+    // This is a tests
+    
     std::cout << a << std::endl;
 }
