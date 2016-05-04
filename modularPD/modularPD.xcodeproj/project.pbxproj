@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B12B0391CD94F3B00B257F4 /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B0371CD94F3B00B257F4 /* FileUtils.cpp */; };
 		3B313F491CD75703006AAC15 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B313F481CD75703006AAC15 /* main.cpp */; };
 		3B313F521CD75889006AAC15 /* libopencv_core.2.4.12.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B313F501CD75889006AAC15 /* libopencv_core.2.4.12.dylib */; };
 		3B313F531CD75889006AAC15 /* libopencv_highgui.2.4.12.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B313F511CD75889006AAC15 /* libopencv_highgui.2.4.12.dylib */; };
+		3B6BE2AC1CD7B47C00DCFC02 /* Dataset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BE2AA1CD7B47C00DCFC02 /* Dataset.cpp */; };
+		3B6BE2AF1CD7B56D00DCFC02 /* ImageFeatures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BE2AD1CD7B56D00DCFC02 /* ImageFeatures.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B12B0371CD94F3B00B257F4 /* FileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
+		3B12B0381CD94F3B00B257F4 /* FileUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileUtils.hpp; sourceTree = "<group>"; };
 		3B313F451CD75703006AAC15 /* modularPD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = modularPD; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B313F481CD75703006AAC15 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3B313F501CD75889006AAC15 /* libopencv_core.2.4.12.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_core.2.4.12.dylib; sourceTree = "<group>"; };
 		3B313F511CD75889006AAC15 /* libopencv_highgui.2.4.12.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_highgui.2.4.12.dylib; sourceTree = "<group>"; };
+		3B6BE2AA1CD7B47C00DCFC02 /* Dataset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dataset.cpp; sourceTree = "<group>"; };
+		3B6BE2AB1CD7B47C00DCFC02 /* Dataset.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dataset.hpp; sourceTree = "<group>"; };
+		3B6BE2AD1CD7B56D00DCFC02 /* ImageFeatures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageFeatures.cpp; sourceTree = "<group>"; };
+		3B6BE2AE1CD7B56D00DCFC02 /* ImageFeatures.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ImageFeatures.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +74,12 @@
 			isa = PBXGroup;
 			children = (
 				3B313F481CD75703006AAC15 /* main.cpp */,
+				3B6BE2AA1CD7B47C00DCFC02 /* Dataset.cpp */,
+				3B6BE2AB1CD7B47C00DCFC02 /* Dataset.hpp */,
+				3B6BE2AD1CD7B56D00DCFC02 /* ImageFeatures.cpp */,
+				3B6BE2AE1CD7B56D00DCFC02 /* ImageFeatures.hpp */,
+				3B12B0371CD94F3B00B257F4 /* FileUtils.cpp */,
+				3B12B0381CD94F3B00B257F4 /* FileUtils.hpp */,
 			);
 			path = modularPD;
 			sourceTree = "<group>";
@@ -134,7 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6BE2AC1CD7B47C00DCFC02 /* Dataset.cpp in Sources */,
+				3B6BE2AF1CD7B56D00DCFC02 /* ImageFeatures.cpp in Sources */,
 				3B313F491CD75703006AAC15 /* main.cpp in Sources */,
+				3B12B0391CD94F3B00B257F4 /* FileUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,9 +244,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/opencv/2.4.12/lib;
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/opencv/2.4.12/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/opencv/2.4.12/lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/2.4.12/lib,
+					/usr/local/Cellar/boost/1.60.0_2/lib,
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/2.4.12/include,
+					/usr/local/Cellar/boost/1.60.0_2/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/2.4.12/lib,
+					/usr/local/Cellar/boost/1.60.0_2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -237,9 +264,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/opencv/2.4.12/lib;
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/opencv/2.4.12/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/opencv/2.4.12/lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/2.4.12/lib,
+					/usr/local/Cellar/boost/1.60.0_2/lib,
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/2.4.12/include,
+					/usr/local/Cellar/boost/1.60.0_2/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/2.4.12/lib,
+					/usr/local/Cellar/boost/1.60.0_2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -263,6 +299,7 @@
 				3B313F4E1CD75703006AAC15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
