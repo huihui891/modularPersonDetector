@@ -3,8 +3,7 @@
 //  modularPD
 //
 //  Created by Javier Fernández Marqués on 03/05/2016.
-//  Copyright © 2016 Javier Fernandez Marques. All rights reserved.
-//
+
 
 #include "FileUtils.hpp"
 
